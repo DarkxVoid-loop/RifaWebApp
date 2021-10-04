@@ -1,0 +1,27 @@
+.confiContainerFluid{
+    padding-bottom: 40px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .div-table{
+    margin-bottom: 15px;
+  }
+  
+  .div-botoes{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .botao-remover{
+    margin-left: 10px;
+  }
+  
+  .botao-consultar{
+    margin-left: 10px;
+  }
+  
+
+  

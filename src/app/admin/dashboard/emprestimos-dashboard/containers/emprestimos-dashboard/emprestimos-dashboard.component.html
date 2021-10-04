@@ -1,0 +1,17 @@
+<mat-tab-group>
+    <mat-tab label="Solicitações de Emprestimo">
+        <app-listar-emprestimos-pessoas-solicitacoes (consultar)="consultarEmprestimoPessoa($event)">
+        </app-listar-emprestimos-pessoas-solicitacoes>
+    </mat-tab>
+
+    <mat-tab label="Solicitações de Emprestimo Por Pessoa">
+        <app-listar-emprestimos-solicitacoes-pessoa
+            [emprestimosSolicitacoesPorPessoa]="emprestimosSolicitacoesPorPessoa"
+            (aceitar)="aceitarSolicitacaoEmprestimo($event)" (recusar)="recusarSolicitacaoEmprestimo($event)">
+        </app-listar-emprestimos-solicitacoes-pessoa>
+    </mat-tab>
+
+    <mat-tab label="Emprestimo Por Pessoa">
+        <app-listar-emprestimos-pessoa [emprestimoPorPessoa]="emprestimoPorPessoa"></app-listar-emprestimos-pessoa>
+    </mat-tab>
+</mat-tab-group>

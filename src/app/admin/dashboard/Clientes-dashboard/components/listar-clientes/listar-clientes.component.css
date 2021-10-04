@@ -1,0 +1,35 @@
+.confiContainerFluid{
+    padding-bottom: 40px;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+  .container {
+    height: 400px;
+    max-width: 100%;
+    overflow: auto;
+  }
+  
+  .div-table{
+    margin-bottom: 15px;
+  }
+  
+  .div-botoes{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .botao-remover{
+    margin-left: 10px;
+  }
+  
+  .botao-relatorio{
+    margin-left: 10px;
+  }
+  
+  .botao-sorteio{
+    margin-left: 10px;
+  }
+  

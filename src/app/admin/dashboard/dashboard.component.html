@@ -1,0 +1,77 @@
+<mat-toolbar color="accent" class="example-toolbar">
+  <button mat-icon-button matTooltip="Application Menu" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Rif4
+  <span style="flex: 1 1 auto;"></span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container" autosize>
+
+  <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
+    (mouseleave)="mouseleave()">
+    <mat-nav-list dense>
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+        <mat-expansion-panel-header>
+          Rifas
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          <a mat-list-item routerLink="/dashboard/rifas">
+            <mat-icon>list</mat-icon>
+            Listar Rifas
+          </a>
+          <a mat-list-item routerLink="/dashboard/sorteios">
+            <mat-icon mat-list-icon>star</mat-icon>
+            Sorteio
+          </a>
+
+          <a mat-list-item routerLink="/dashboard/premios">
+            <mat-icon mat-list-icon>blender</mat-icon>
+            Premios
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-list-item [routerLink]="'/dashboard/clientes'">
+        <mat-icon mat-list-icon>people</mat-icon>
+        Clientes
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'/dashboard/emprestimos'">
+        <mat-icon mat-list-icon>credit_card</mat-icon>
+        Emprestimos
+      </mat-list-item>
+
+
+      <!-- <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+        <mat-expansion-panel-header>
+          Privacy
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          <a mat-list-item routerLink="#">
+            <mat-icon>person_add</mat-icon>Partnership Request
+          </a>
+          <a mat-list-item routerLink="#">
+            <mat-icon>visibility</mat-icon>Profile Visibility
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel> -->
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+

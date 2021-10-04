@@ -1,0 +1,43 @@
+
+<div class="container-img">
+    <div class="logoContainer">
+      <p><img class="imgLogo" src="assets/imagens/logo.png">
+      </p>
+<!--  <div class="buttonsContainer">
+        <a class="titleComponent-1 grayColor" href="https://dcarnesdelivery.kyte.site/">D'Carnes</a>
+        <a class="titleComponent-2 grayColor" href="#rifas">Rif4Books</a>
+      </div> -->
+    </div>
+</div>
+<div class="main-page">
+  <label class="titleCardsContainer" id='rifas'>Ações em destaque</label>
+  <div class="cardsContainer">
+    <div  class="itemLabel" *ngFor="let item of rifa">
+      <div class="cards" routerLink="/rifa/{{item.rifaId}}">
+        <div class="imgContainer"><img class="imgPrecmiacao" src="../../../assets/imagens/premiacao.jpeg">
+         <!--  <div class="infoRifa"  [ngClass]="{'grennInfoColor' : item.status == 'Disponivel', 'redInfoColor' : item.status == 'Indisponivel' }">
+            <i class="bi bi-check2 blackColorsStatus"></i>
+            <div class="infoText">| {{item.status}}</div>
+          </div> -->
+        </div>
+        <div class="headCardContainer">
+          <div class="progressContainer">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" [style]="'width:' + conterGrafic(item.numeroMin) + '%'" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{conterGrafic(item.numeroMin)}}%</div>
+            </div>
+          </div>
+          <div class="title">{{item.titulo}}</div>
+          <div class="statusContainer">
+            <div class="disponivel"></div>
+            <label class='statusLabel'>Disponivel</label>
+          </div>
+          <div class="descriptionContainer">
+            <div class="subTitle">{{item.descricao}}</div>
+            <div class="price">Preço: <a>R${{item.preco}},00</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="marginButtom"></div>
+</div>

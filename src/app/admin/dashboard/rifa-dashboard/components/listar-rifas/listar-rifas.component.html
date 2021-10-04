@@ -1,0 +1,61 @@
+<div class="mat-elevation-z8 div-table">
+
+    <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="rifaId">
+            <th mat-header-cell *matHeaderCellDef> RifaId </th>
+            <td mat-cell *matCellDef="let element"> {{element.rifaId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="titulo">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Título </th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="preco">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Preço </th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.preco | currency : 'R$'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="lancamento">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Lançamento</th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.lancamento | formatDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="dataFimJogadas">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> DataFimJogadas</th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.dataFimJogadas | formatDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="acoes">
+
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Ações</th>
+            <td class="text-center" mat-cell *matCellDef="let element">
+
+                <div class="div-botoes">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Editar" (click)="editar.emit(element.rifaId)">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-danger botao-remover" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Remover" (click)="deletarRifa(element.rifaId)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-info botao-relatorio" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="relatório" (click)="relatorio.emit(element.rifaId)">
+                        <i class="bi bi-card-text"></i>
+                    </button>
+                </div>
+            </td>
+
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator #paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

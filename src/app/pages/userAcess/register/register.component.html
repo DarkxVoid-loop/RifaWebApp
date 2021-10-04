@@ -1,0 +1,105 @@
+<div class="card formContainer">
+  <div class="card-header">
+    Área de Registro
+  </div>
+  <div class="card-body ">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <h5 class="card-title"><i class="bi bi-person-fill" ></i> Nome Completo</h5>
+        <input type="text" class="form-control" aria-describedby="cpfHelper" placeholder="Nome Completo" formControlName="nome">
+        <ng-container *ngIf="formulario.controls.nome.touched">
+          <span class="warningContainer" *ngIf="formulario.controls.nome.errors">
+            <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+            <label class="warningTextConfig">Campo Obrigatório</label>
+          </span>
+        </ng-container>
+      </div>
+      <div class="mb-3">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title"><i class="bi bi-person-fill"></i> CPF</h5>
+            <input class="form-control"  placeholder="Seu CPF" mask='000.000.000-00' formControlName="cpf">
+            <ng-container *ngIf="formulario.controls.cpf.touched">
+              <span class="warningContainer" *ngIf="formulario.controls.cpf.errors">
+                <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+                <label class="warningTextConfig">Campo Obrigatório</label>
+              </span>
+            </ng-container>
+          </div>
+          <div class="col">
+            <h5 class="card-title"><i class="bi bi-envelope-fill"></i> E-mail</h5>
+            <input class="form-control"  placeholder="Seu e-mail" formControlName="email">
+            <ng-container *ngIf="formulario.controls.email.touched">
+              <span class="warningContainer" *ngIf="formulario.controls.email.errors">
+                <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+                <label class="warningTextConfig">Campo Obrigatório</label>
+              </span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title"><i class="bi bi-person-fill"></i> Senha</h5>
+            <input class="form-control"  placeholder="Senha" type="password" formControlName="password">
+            <ng-container *ngIf="formulario.controls.password.touched">
+              <span class="warningContainer" *ngIf="formulario.controls.password.errors">
+                <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+                <label class="warningTextConfig">Campo Obrigatório</label>
+              </span>
+            </ng-container>
+          </div>
+          <div class="col">
+            <h5 class="card-title"><i class="bi bi-person-fill"></i> Confirmação de senha</h5>
+            <input class="form-control"  placeholder="Senha" type="password" formControlName="rePassword">
+            <ng-container *ngIf="formulario.controls.password.touched">
+              <span class="warningContainer" *ngIf="formulario.controls.password.errors">
+                <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+                <label class="warningTextConfig">Campo Obrigatório</label>
+              </span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="mb-1">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title"><i class="bi bi-person-fill"></i> Cidade</h5>
+            <input class="form-control"  placeholder="Sua Cidade" formControlName="cidade">
+            <ng-container *ngIf="formulario.controls.cidade.touched">
+              <span class="warningContainer" *ngIf="formulario.controls.cidade.errors">
+                <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+                <label class="warningTextConfig">Campo Obrigatório</label>
+              </span>
+            </ng-container>
+          </div>
+          <div class="col">
+            <h5 class="card-title"><i class="bi bi-person-fill"></i> Telefone</h5>
+            <input class="form-control"  placeholder="Seu numero de telefone" mask='(00) 00000-0000' formControlName="telefone">
+            <ng-container *ngIf="formulario.controls.telefone.touched">
+              <span class="warningContainer" *ngIf="formulario.controls.telefone.errors">
+                <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+                <label class="warningTextConfig">Campo Obrigatório</label>
+              </span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="form-group form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="checkRegulamento">
+        <label class="form-check-label" for="exampleCheck1">Concordo com o <a routerLink='/termos'> Regulamento</a></label>
+        <ng-container *ngIf="formulario.controls.checkRegulamento.touched">
+          <span class="warningContainerCheckbox" *ngIf="formulario.controls.checkRegulamento.errors">
+            <i class="bi bi-exclamation-triangle warningIconConfig"></i>
+            <label class="warningTextConfig">Campo Obrigatório</label>
+          </span>
+        </ng-container>
+      </div>
+      <button type="submit" id="registerButton" class="btn btn-primary" routerLink='/userAcess/register' [disabled]="formulario.invalid" >Registrar-se</button>
+      <button type="submit" id="loginButton" class="btn btn-primary" routerLink='/userAcess/login'>Voltar</button>
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

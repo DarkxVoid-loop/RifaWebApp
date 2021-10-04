@@ -1,0 +1,58 @@
+<div class="mat-elevation-z8 div-table">
+
+    <table mat-table [dataSource]="sorteios">
+
+        <ng-container matColumnDef="sorteioId">
+            <th mat-header-cell *matHeaderCellDef> SorteioId </th>
+            <td mat-cell *matCellDef="let element"> {{element.sorteioId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rifaId">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> RifaId </th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.rifaId}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="data">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Data</th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.data | formatDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="numeroConcurso">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Número Concurso</th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.numeroConcurso }} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="acoes">
+
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Ações</th>
+            <td class="text-center" mat-cell *matCellDef="let element">
+
+                <div class="div-botoes">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Editar" (click)="editar.emit(element.sorteioId)">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-danger botao-remover" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Remover" (click)="remover.emit(element.sorteioId)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-success botao-consultar" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="premios" (click)="consultar.emit(element.sorteioId)">
+                    <i class="bi bi-check2"></i>
+                </button>
+
+                </div>
+            </td>
+
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+</div>

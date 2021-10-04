@@ -1,0 +1,10 @@
+.div-botoes{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+.botao-gravar{
+    margin-left: 10px;
+}

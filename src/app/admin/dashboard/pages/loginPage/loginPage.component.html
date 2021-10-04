@@ -1,0 +1,9 @@
+<body>
+  <form [formGroup]="adminLogin" (ngSubmit)="onSubmit()" class="box" action="dashboard.component.html" method="post">
+    <h1>Admin</h1>
+    <input mask='000.000.000-00' formControlName="cpf" type="text" name="" placeholder="CPF">
+    <input formControlName="password" type="password" placeholder="Senha">
+    <input type="submit" name="" value="OK">
+  </form>
+  <router-outlet></router-outlet>
+</body>

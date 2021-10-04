@@ -1,0 +1,573 @@
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .submit-button {
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0.1em 0.1em 0.8em black;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+  
+    font-weight: 500;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .dividerButton{
+    width: 0.5px;
+    height: 100%;
+    background-color: white;
+  }
+  
+  .buttonText{
+    padding-left: 4px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .grayHover:hover{
+    background-color: rgb(131, 131, 131);
+  }
+  .greenHover:hover{
+    background-color: green;
+  }
+  
+  .submit-button:disabled{
+    opacity: 0.1;
+  
+  }
+  
+  .number-input {
+    transition: all .8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 120px;
+  }
+  
+  .black-label {
+    background-color: black;
+  }
+  
+  .blue-label {
+    background-color: #427fcc;
+  }
+  
+  .blue-label:hover {
+    background-color: #34639e;
+  }
+  
+  .spacer-1em {
+    margin: 1em;
+  }
+  
+  .spacer-2em {
+    margin: 2em;
+  }
+  
+  .label {
+    padding: 0.5em;
+    margin: 1em 1em 1em 1em;
+    color: white;
+  }
+  
+  .transition-ease-in-out {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .gray-label {
+    cursor: no-drop;
+    background-color: #a5a5a5;
+    border: gray solid 2px;
+  }
+  .gold-label{
+    color: gold;
+  }
+  
+  .gray-label:hover {
+    background-color: #7d7d7d;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .cursor-not-allowed {
+    cursor: not-allowed;
+  }
+  
+  .green-label {
+    border: green solid 2px;
+    background-color: #00C853;
+    cursor: pointer;
+  }
+  
+  .green-label:hover {
+    background-color: #008a39;
+  }
+  
+  .green-label-not-allowed {
+    background-color: #00C853;
+    cursor: not-allowed;
+  }
+  
+  .blue-label{
+    cursor: pointer;
+    border: blue solid 2px;
+    background-color: #427FCC;
+  }
+  
+  .yellow-label {
+    cursor: no-drop;
+    border: yellow solid 2px;
+    background-color: #FFD600;
+  }
+  
+  .yellow-label:hover {
+    background-color: #d6b300;
+  }
+  
+  .yellow-label-not-allowed {
+    border: yellow solid 2px;
+    background-color: #FFD600;
+    cursor: not-allowed;
+  }
+  
+  .buttonsContainer .green-label{
+    border: none;
+  }
+  .buttonsContainer .gray-label{
+    border: none;
+  }
+  .buttonsContainer .yellow-label{
+    cursor: pointer;
+    border: none;
+  }
+  .buttonsContainer .blue-label{
+    border: none;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .flex-direction-column {
+    flex-direction: column;
+  }
+  
+  
+  
+  .numbers-container {
+    width: 100%;
+    min-height: 930px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: inset 0 0 1em black;
+    border: solid 1px white;
+  }
+  
+  .buttonsContainer{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .labelContainer{
+    /* border: yellow solid 1px; */
+    width: 100%!important;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+    height: auto;
+    flex-direction: row;
+    padding: 15px 15px 15px 15px;
+  }
+  
+  .controlLabelContianer{
+    min-height: 690px;
+    height: auto;
+  }
+  
+  .labelprops{
+    height: 40px;
+    width: 110px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid 2px rgb(255, 255, 255);
+  }
+  
+  .labelprops:hover{
+    color: red;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .labelConterNumbers{
+    margin-left: 2px;
+    font-size: 10px;
+    margin-top: 2px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 20px;
+    width: 25px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0.2em black;
+  }
+  
+  
+  .itemConter{
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: red;
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .infoContainer{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  .amountContainer{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  
+  .infoTitle{
+    margin-top: 10px;
+    margin-left: 12px;
+  }
+  
+  .blue-label-fixed{
+    background-color: #427FCC;
+  }
+  .yellow-label-fixed{
+    background-color: #FFD600;
+  }
+  .green-label-fixed{
+    background-color: #00C853;
+  }
+  .gray-label-fixed{
+    background-color: #A5A5A5;
+  }
+  
+  
+  .divider{
+    width: 100%;
+    background-color: white;
+    height: 4px;
+    margin-bottom: 20px;
+    margin-top: -15px;
+  }
+  
+  .myNumbers{
+    padding-bottom: 10px;
+  }
+  
+  .imgPremiacao{
+    transform: scale(0.5);
+    width: 200px;
+    height: 400px;
+    border: solid 1px black;
+  }
+  
+  
+  
+  
+  .imgContainer img{
+    width: 310px;
+    height: 600px;
+    box-shadow: 0 0 1em black;
+    border-radius: 5px;
+  }
+  
+  .imgContainer img:hover{
+    box-shadow: 0 0 0.8em 0.2em rgba(136, 25, 25, 0.63);
+    cursor: zoom-in;
+  }
+  
+  
+  .imgContainer{
+    padding-right: 150px;
+  }
+  
+  
+  .gameContainer{
+    padding: 40px 40px 40px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .headerContainer{
+    margin: 40px 92px 40px 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .headerContainer img{
+    width: 260px;
+    margin-top: 20px;
+  }
+  
+  .headerInfoContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 0 20px;
+    width: 100%;
+  }
+  
+  .topDivider{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  
+  }
+  
+  .submit-button .bi{
+    padding-right: 5px;
+  }
+  
+  .columnGap{
+    column-gap: 20px;
+  }
+  
+  .rifaTitle{
+    font-weight: 550;
+    font-size: 40px;
+  }
+  
+  .rifaDescription{
+    padding-left: 10px;
+    font-size: 20px;
+  }
+  
+  
+  .columnImg{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card{
+    max-height: 779px;
+    margin-top: 20px;
+  
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: inset 0 0 1em black;
+    border: solid 1px white;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  
+  .buttonCard{
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: solid 1px white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .buttonCard:hover{
+    color: red;
+    background-color: black;
+    cursor: pointer;
+  }
+  
+  .buttonsRow{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .labelParticipantes{
+    color: white;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+  
+  .participantesContainer{
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+  
+    overflow-y: scroll;
+    width: 92%;
+    margin-bottom: 5px;
+    border-top: solid 1px white;
+    margin-top: 2px;
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+  
+  #style-2::-webkit-scrollbar-track
+  {
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  #style-2::-webkit-scrollbar
+  {
+      width: 12px;
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  #style-2::-webkit-scrollbar-thumb
+  {
+      border-radius: 2px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: white;
+  }
+  
+  .premiacaoContainer{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: inset 0 0 1em black;
+    border: solid 1px white;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    margin-left: 15px;
+  }
+  
+  .midRigth{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .premiacaoButtons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 73px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+  
+  .dividerPremiacao{
+    width: 100%;
+    height: 4px;
+    background-color: white;
+  }
+  
+  .premiacaoButtons .button{
+    border: 2px solid white;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .premiacaoButtons .button:hover{
+    background-color: black;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .tablePremiacao{
+    height: 100%;
+    width: 100%;
+  }
+  
+  mat-tab{
+    margin: 12px;
+  }
+  
+  .bodyPremiao{
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .bodyPremiao img{
+    width: 350px;
+  
+    height: 700px;
+    border: 1px black solid;
+    box-shadow: 0em 0em 0.5em red;
+    margin-bottom: 20px;
+  }
+  
+  .btn{
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .flex{
+    justify-content: center;
+    margin-bottom: 250px;
+  }
+  
+  .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 500px;
+  }
+
+  .column .button{
+    width: 200px;
+    margin: 15px;
+  }

@@ -1,0 +1,24 @@
+  <div class="card">
+    <div class="card-header">
+      Área de Acesso
+    </div>
+    <div class="card-body">
+      <form [formGroup]="login" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <h5 class="card-title"><i class="bi bi-person-fill"></i>CPF</h5>
+          <input type="text" class="form-control" aria-describedby="cpfHelper" placeholder="Seu CPF" mask='000-000-000-00' formControlName="cpf">
+        </div>
+        <div class="mb-3">
+          <h5 class="card-title"><i class="bi bi-person-fill"></i>Senha</h5>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Sua Senha" formControlName="password">
+        </div>
+        <div class="recoveryPasswordComponent"><a routerLink="/userAcess/recoveryPassword">Esqueci minha senha</a></div>
+        <div class="buttonContainer">
+          <button type="submit" id="loginButton" class="btn btn-primary purpleColor" [disabled]="login.invalid">Entrar</button>
+        <button type="submit" id="registerButton" class="btn btn-primary greyColor" routerLink='/userAcess/register'>Registrar-se</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+

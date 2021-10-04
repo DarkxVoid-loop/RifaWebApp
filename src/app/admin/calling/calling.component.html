@@ -1,0 +1,10 @@
+<body>
+  <div class="keyboard-area">
+    <label class="box" (click)="cathNumbers(item.value)"
+    *ngFor="let item of items">{{item.value}}</label>
+    <label class="box"><i class="bi bi-telephone-forward-fill" (click)="makeCall()"></i></label>
+  </div>
+  <div class="number-area">
+    <label for="">16991204444</label>
+  </div>
+</body>

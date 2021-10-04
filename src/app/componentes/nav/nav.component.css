@@ -1,0 +1,130 @@
+.img-logo{
+  max-width:100px;
+  max-height:40px;
+  width: auto;
+  height: auto;
+}
+
+.navbar{
+  background-color: black;
+}
+
+
+li button{
+  background-color: black;
+  border: none;
+}
+
+.redColor{
+  color: red!important;
+}
+
+.img-logo-index{
+  height: 100px;
+  height: 40px;
+  transform: scale(1.6);
+}
+.item1{
+  background-image: url('../../../assets/imagens/instaButton.png');
+  width: 50px;
+  height: 50px;
+}
+.item2{
+  margin-left: 20px;
+  background-image: url('../../../assets/imagens/whatsButton.png');
+  width: 50px;
+  height: 50px;
+}
+.itemContainer{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+@media screen and (max-width: 766px) {
+  .img-logo-index{
+    padding-left: 20px;
+  }
+}
+
+.liHover:hover{
+  cursor: pointer;
+  box-shadow: 0 0 0.8em white;
+  border-radius: 25px;
+}
+
+.navbar-saldo{
+  padding-top: 3px;
+  width: auto;
+  height: 25px;
+  color: white;
+
+}
+
+.bi{
+  position: relative;
+  left: 5px;
+  padding-right: 10px;
+  color: white;
+}
+.saldo{
+  padding-right: 5px;
+}
+
+.inputLabelSaldo{
+  width: auto;
+  background-color: transparent;
+  border: none;
+  color: gold;
+  outline: none;
+}
+
+
+.apelidoContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.leftTopContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.apelidoLabel{
+  color: white;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.apelido{
+  color: gold!important;
+  margin-left: 5px;
+}
+
+.apelidoArea{
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-nav{
+  margin-right: 90px!important;
+  align-items: center!important;
+}
+
+mat-tab-group{
+  color: blue;
+}
+
+
+.nav-link{
+  color: white!important;
+}
+
+.nav-link:focus{
+  color: red!important;
+}
+

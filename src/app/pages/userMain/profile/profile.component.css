@@ -1,0 +1,117 @@
+.iconConfig{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.mainContainer{
+  width: auto;
+  height: 800px;
+}
+
+
+.userDetailsContainer{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+.formInputConfig{
+  width: 300px;
+}
+
+.titlePageContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.configTitlePageIcon{
+  font-size: 60px;
+}
+
+.divider{
+  margin-top: -20px;
+  height: 100%;
+  color: black;
+  height: 2px;
+  border: 1px solid black;
+}
+
+.titlePage{
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-left: 5px;
+  width: 200px;
+}
+
+.surname{
+  padding-left: 8px;
+  padding-bottom: 25px;
+  margin-top: 0px;
+  font-weight: 400;
+  color: #4d4f52;
+}
+
+.titleLabelContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.userSurname{
+  color: red;
+}
+
+
+.userSurname:hover{
+  color: rgb(255, 60, 0);
+  text-decoration: underline;
+}
+
+.img-logo{
+  width: 75px;
+  height: 60px;
+  right: 120px;
+  top: 10px;
+  margin-bottom: 15px;
+}
+
+.dividerLogo{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editingButtom{
+  background-color: #444D58;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.editingButtom:hover{
+  background-color: #6b798a;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.editingButtom:disabled{
+  background-color: #E9ECEF;
+  color: rgb(75, 73, 73);
+  cursor: default;
+}

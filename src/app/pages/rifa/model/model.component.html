@@ -1,0 +1,17 @@
+<div class="column">
+  <mat-tab-group>
+    <mat-tab label="Credito"> 
+      <app-checkout></app-checkout> 
+    </mat-tab>
+    <mat-tab label="Debito"> Content 2 </mat-tab>
+    <mat-tab label="Boleto"> Content 3 </mat-tab>
+    <mat-tab label="Pix"> Content 3 </mat-tab>
+    <mat-tab label="Transferencia"> Content 3 </mat-tab>
+    <mat-tab label="Saldo"> 
+      <app-emprestimo></app-emprestimo>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<div mat-dialog-actions class="btn">
+  <button mat-button (click)="onNoClick()">Finalizar</button>
+</div>

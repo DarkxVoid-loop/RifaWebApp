@@ -1,0 +1,33 @@
+<div class="mat-elevation-z8 div-table">
+
+    <table mat-table [dataSource]="emprestimoPorPessoa">
+
+        <ng-container matColumnDef="emprestimoId">
+            <th mat-header-cell *matHeaderCellDef> EmprestimoId </th>
+            <td mat-cell *matCellDef="let element"> {{element.emprestimoId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="data">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Data </th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.data | formatDate}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="valor">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Valor</th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.valor | currency: 'R$'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="pago">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> Pagos</th>
+            <td class="text-center" mat-cell *matCellDef="let element"> {{element.pago}} </td>
+        </ng-container>
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+</div>

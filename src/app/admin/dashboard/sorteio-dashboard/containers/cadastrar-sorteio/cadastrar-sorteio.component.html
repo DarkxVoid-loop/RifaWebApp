@@ -1,0 +1,70 @@
+<form [formGroup]="sorteioForm" (ngSubmit)="submit()">
+
+    <div class="row">
+
+        <div class="form-group col-md-3">
+            <label for="data" class="form-label">Data</label>
+            <input class="form-control" bsDatepicker formControlName="data" id="data" name="data"
+                [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', containerClass: 'theme-blue' }">
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="rifaId" class="form-label">RifaId</label>
+            <select class="form-select" aria-label="Default select example" formControlName="rifaId">
+                <option selected>Selecione uma Rifa</option>
+                <option *ngFor="let rifa of rifas" [value]="rifa.rifaId">
+                    {{rifa.descricao}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="sorteadorId" class="form-label">Sorteadores</label>
+            <select class="form-select" aria-label="Default select example" formControlName="sorteadorId">
+                <option selected>Selecione um Sorteador</option>
+                <option *ngFor="let sorteador of sorteadores" [value]="sorteador.id">
+                    {{sorteador.nome}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="numeroConcurso" class="form-label">Número Concurso</label>
+            <input type="text" class="form-control" id="numeroConcurso" formControlName="numeroConcurso">
+        </div>
+
+        <div *ngIf="isPremio" class="card card-premio">
+            <div class="card-body">
+                <form [formGroup]="premioForm" (ngSubmit)="submit()">
+
+                    <div class="row">
+
+                        <div *ngIf="isPremio" class="form-group col-md-6">
+                            <label for="sorteioId" class="form-label">SorteioId</label>
+                            <input type="text" class="form-control" id="sorteioId" [value]="id" disabled>
+                        </div>
+
+                        <div *ngIf="isPremio" class="form-group col-md-6">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" formControlName="nome">
+                        </div>
+
+                        <div *ngIf="isPremio" class="form-group col-md-6">
+                            <label for="posicao" class="form-label">Posição</label>
+                            <input type="number" class="form-control" id="posicao" formControlName="posicao">
+                        </div>
+
+                        <div *ngIf="isPremio" class="form-group col-md-6">
+                            <label for="descricao" class="form-label">Descrição </label>
+                            <input type="text" class="form-control" id="descricao" formControlName="descricao">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <app-buttons-form (voltar)="voltarListagem()"></app-buttons-form>
+    </div>
+</form>

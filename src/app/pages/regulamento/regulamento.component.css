@@ -1,0 +1,101 @@
+.container {
+  width: 100vw;
+  height: auto;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.img-logo{
+  width: 150px;
+  height: 100px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+
+/*Cores*/
+.blueColor{
+  background-color: #3984C6;
+}
+
+.greenColor{
+ background-color: #FFEEAD;
+}
+
+.redColor{
+  background-color: #F9E3D0;
+}
+
+.iconConfiguration{
+  font-size: 25px;
+  color: white;
+  padding-left: 4px;
+}
+
+
+.topContainer{
+  display: flex;
+  background-color: #444D58;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 98%;
+
+}
+
+.regulationTitle{
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  padding-right: 40px;
+}
+
+.regulamentoContainer{
+  border: #444D58 solid 1px;
+  border-top: 0px;
+  width: 98%;
+  min-height: 1000px;
+  height: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.reportTitle{
+  padding-top: 30px;
+  padding-bottom: 5px;
+  margin-left: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.reportData{
+  margin-left: 38px;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+}
+
+.regulamentoTitle{
+  color: black;
+  font-weight: 500;
+  justify-content: center;
+  display: flex;
+}

@@ -1,0 +1,72 @@
+<form [formGroup]="rifaForm" (ngSubmit)="submit()">
+
+  <div class="row">
+
+    <div class="form-group col-md-3">
+      <label for="titulo" class="form-label">Título da Rifa</label>
+      <input type="text" class="form-control" id="titulo" formControlName="titulo">
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="descricao" class="form-label">Descrição</label>
+      <input type="text" class="form-control" id="descricao" formControlName="descricao">
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="statusVisualizacaoId" class="form-label">Status Visualização</label>
+      <select class="form-select" formControlName="statusVisualizacaoId">
+        <option selected>Selecione um Status </option>
+        <option *ngFor="let statusVisualizacaoRifa of statusVisualizacaoRifas" [value]="statusVisualizacaoRifa.id">
+          {{statusVisualizacaoRifa.nome}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="statusRifaId" class="form-label">Status Visualização</label>
+      <select class="form-select" formControlName="statusRifaId">
+        <option selected>Selecione um Status</option>
+        <option *ngFor="let statusRifa of statusRifas" [value]="statusRifa.id">
+          {{statusRifa.nome}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-4">
+      <label for="numeroMax">Número Max</label>
+      <input type="number" class="form-control" id="" placeholder="200" formControlName="numeroMax">
+    </div>
+
+    <div class="form-group col-4">
+      <label for="numeroMin">Número Min</label>
+      <input type="number" class="form-control" id="numeroMin" placeholder="1" formControlName="numeroMin">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="preco" class="form-label">Preço</label>
+      <input type="text" class="form-control" formControlName="preco" currencyMask
+        [options]=" { prefix: '', thousands: '.', decimal: ',', allowNegative: false }">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="whatsAppContato" class="form-label">WhatsappContato</label>
+      <input type="text" class="form-control" id="whatsAppContato" formControlName="whatsAppContato"
+        [textMask]="{mask: celMask}">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="lancamento">Lançamentos:</label>
+      <input type="date" id="lancamento" class="form-control" formControlName="lancamento" name="lancamento"
+        value="2021-10-12" min="2021-10-12" max="2028-12-31">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="dataFimJogadas">Data de fim de jogadas:</label>
+      <input type="date" id="dataFimJogadas" name="dataFimJogadas" class="form-control" formControlName="dataFimJogadas"
+        value="2021-10-12" min="2021-10-12" max="2028-12-31">
+    </div>
+
+    <app-buttons-form (voltar)="voltarListagem()"></app-buttons-form>
+
+  </div>
+</form>

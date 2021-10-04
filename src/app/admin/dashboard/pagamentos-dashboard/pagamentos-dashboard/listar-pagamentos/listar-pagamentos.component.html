@@ -1,0 +1,71 @@
+<div class="container-fluid py-4">
+  <h2> Pagamentos</h2>
+
+  <br>
+  <div class="container-fluid row">
+      <div class="col-6">
+          <ngx-charts-line-chart
+          [view]="view"
+          scheme="cool"
+          [legend]="legend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxis]="xAxis"
+          [yAxis]="yAxis"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          [timeline]="timeline"
+          [results]="data"
+          (select)="onSelect($event)"
+          (activate)="onActivate($event)"
+          (deactivate)="onDeactivate($event)">
+          </ngx-charts-line-chart>
+      </div>
+      <div class="col-6">(grafico proporção de status)</div>
+  </div>
+  <br>
+
+  <div class="row justify-content-between my-4">
+      <div class="col-1">
+          <button type="button" class="btn btn-secondary" (click)="voltarPagina()" *ngIf="pag > 1">Anterior</button>
+      </div>
+      <div class="col-1">
+          <button type="button" class="btn btn-success" (click)="proximaPagina()">Proxima</button>
+      </div>
+  </div>
+  <table class="table">
+      <thead>
+          <tr>
+              <th scope="col">Cliente</th>
+              <th scope="col">WhatsApp</th>
+              <th scope="col">Status</th>
+              <th scope="col">Data de Solicitacao</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Ver Perfil</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let pagamento of pagamentos; let i = index">
+              <td>{{pagamento.Cliente}}</td>
+              <td>{{pagamento.WhatsApp}}</td>
+              <td *ngIf="pagamento.StatusPagamento === 'Paid'" class="text-primary">{{pagamento.StatusPagamento}}</td>
+              <td *ngIf="pagamento.StatusPagamento === 'Waiting'" class="text-warning">{{pagamento.StatusPagamento}}</td>
+              <td *ngIf="pagamento.StatusPagamento === 'Cancelled'" class="text-danger">{{pagamento.StatusPagamento}}</td>
+              <td>{{pagamento.DataSolicitacao}}</td>
+              <td>R$ {{pagamento.Valor}}</td>
+              <td>
+                  <button type="button" class="btn btn-primary"><i
+                          class="bi bi-clipboard"></i></button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="row justify-content-between my-4">
+      <div class="col-1">
+          <button type="button" class="btn btn-secondary" (click)="voltarPagina()" *ngIf="pag > 1">Anterior</button>
+      </div>
+      <div class="col-1">
+          <button type="button" class="btn btn-success" (click)="proximaPagina()">Proxima</button>
+      </div>
+  </div>
+</div>

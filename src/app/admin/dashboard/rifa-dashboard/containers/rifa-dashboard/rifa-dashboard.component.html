@@ -1,0 +1,7 @@
+<app-header (cadastrar)="acesssarRotaCadastro()"></app-header>
+
+<app-listar-rifas (editar)="acessarRotaEdicao($event)" (sorteio)="acessarRotaCadastroSorteio($event)"
+    (relatorio)="openDialog()">
+</app-listar-rifas>
+
+<app-relatorio-rifa *ngIf="isModal"></app-relatorio-rifa>

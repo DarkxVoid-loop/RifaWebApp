@@ -1,0 +1,31 @@
+.keyboard-area{
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px;
+  grid-gap: 8px;
+  background-color: #fff;
+  color: #444;
+  justify-content: center;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+   opacity: 0.8;
+}
+
+.number-area{
+  margin-top: 30px;
+  display: grid;
+  justify-content: center;
+  border: black 1px solid;
+}

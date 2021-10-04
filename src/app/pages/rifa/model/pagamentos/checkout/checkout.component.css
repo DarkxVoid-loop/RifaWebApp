@@ -1,0 +1,36 @@
+.c-wrapper {
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 145px;
+}
+
+.c-wrapper__row {
+    width: 600px;
+}
+
+.cc-box {
+    height: 100px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    width: 90% !important;
+    z-index: 1;
+
+}
+
+.cc-form__wrapper--long {
+    margin-top: 15px !important;
+}
+
+.select #cc-expiration-month {
+    margin-bottom: 10px !important;
+}

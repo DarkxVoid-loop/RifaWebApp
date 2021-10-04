@@ -1,0 +1,17 @@
+<div class="container">
+  <img class="img-logo" src="assets/imagens/logo.png">
+  <div class="topContainer">
+    <i class="bi bi-exclamation-triangle iconConfiguration"></i>
+      <label class="regulationTitle">
+        Regulamento
+      </label>
+  </div>
+  <div class="regulamentoContainer">
+    <h1 class="regulamentoTitle">{{regulamentoTitle}}</h1>
+    <div class="item" *ngFor="let item of regulamento">
+      <label class="reportTitle" *ngIf='!item.titleControll'>• {{item.title}}</label>
+      <label class="reportData">{{item.data}}</label>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

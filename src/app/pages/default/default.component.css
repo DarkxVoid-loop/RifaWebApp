@@ -1,0 +1,167 @@
+
+.main{
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+
+  background-color: black;
+}
+
+
+section:nth-of-type(1){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+section:nth-of-type(1) .background{
+  width: 100%;
+  /* width: 85%; */
+  height: 374px;
+
+  background-size: cover;
+  background-image: url("../../../assets/imagens/banner-index-final.jpg");
+}
+
+
+
+.divider{
+  width: 100%;
+  /* width: 85%; */
+  height: 15px;
+  background-color: #D6B47B;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section:nth-of-type(2){
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 200px;
+}
+
+.img1{
+  background-image: url('../../../assets/imagens/BANNER-LOJA.png');
+  height: 200px;
+  width: 360px;
+  border-radius: 10px;
+}
+
+.img2{
+  background-image: url('../../../assets/imagens/BANNER-RIFAS.png');
+  height: 200px;
+  width: 360px;
+  border-radius: 10px
+}
+
+label{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.itemContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h5{
+  font-size: 25px;
+  color: #ffff;
+  margin-top: 15px;
+}
+
+.button{
+  height: 35px;
+  width: 200px;
+  background-color: #f7c776;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 15px;
+  box-shadow: 0.1em 0.1em 0.18em gray;
+}
+
+.button:active{
+  box-shadow: -0.08em -0.08em 0.2em white;
+}
+
+a{
+  text-decoration: none;
+}
+
+@media screen and (max-width:1034px){
+  section:nth-of-type(2) {
+    column-gap: 100px;
+  }
+}
+@media screen and (max-width:926px){
+  section:nth-of-type(2) {
+    column-gap: 50px;
+  }
+}
+@media screen and (max-width:860px){
+  section:nth-of-type(2) {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .itemContainer{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    transform: scale(1.2);
+  }
+  .item2{
+    margin-top: -20px;
+  }
+}
+@media screen and (max-width:470px){
+  .itemContainer{
+    transform: scale(0.95);
+  }
+}
+@media screen and (max-width:320px){
+  .itemContainer{
+    transform: scale(0.85);
+  }
+  h5{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:768px){
+  .itemContainer{
+    transform: scale(1.5);
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  h5{
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width:1024px){
+  section:nth-of-type(2) {
+    justify-content: center;
+    row-gap: 50px;
+  }
+  .itemContainer{
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width:380px){
+  .button{
+    transform: scale(0.8);
+  }
+  .itemContainer{
+    transform: scale(0.8);
+  }
+  h5{
+    transform: scale(0.8);
+  }
+}

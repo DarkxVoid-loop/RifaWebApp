@@ -1,0 +1,93 @@
+<!-- Modal -->
+
+    <h2 mat-dialog-title>Relatório Rifa</h2>
+    <mat-dialog-content class="mat-typography">
+
+        <div class="my-4">
+
+            <h2>Rifa "{{rifa.titulo}}"</h2>
+            <br>
+            <div class="row">
+
+                <div class="col-6">
+
+                    <p>Titulo: {{rifa.titulo}}</p>
+                    <p>Descrição: {{rifa.descricao}}</p>
+                    <p>Preço: R$ {{rifa.preco}}</p>
+                    <p>Numero Minimo: {{rifa.numeroMin}}</p>
+                    <p>Numero Maximo: {{rifa.numeroMax}}</p>
+                    <p>WhatsApp Responsável: {{rifa.whatsAppContato}}</p>
+                    <p *ngIf="rifa.dataFimJogadas != null ">
+                        <b>Data Final para Jogadas </b> : {{formataData(rifa.dataFimJogadas)}}
+                    </p>
+                    <p *ngIf="rifa.lancamento != null ">
+                        <b>Data Final para Jogadas </b> : {{formataData(rifa.lancamento)}}
+                    </p>
+                    <p>Status de Visualização: Ativo</p>
+                    <p>Status: Em Andamento</p>
+                </div>
+                <div class="col-6">(imagem do comprovante do sorteio)</div>
+            </div>
+
+            <br>
+            <br>
+            <!-- <h3>Graficos</h3> -->
+            <div class="row">
+                <div class="col-4">
+                    <h6>Pagos, reservados e disponiveis</h6>
+                    (imagem de grafico)
+                </div>
+                <div class="col-4">
+                    <h6>Jogadas nas ultimas 24h</h6>
+                    (imagem de grafico)
+                </div>
+                <div class="col-4">
+                    <h6>Jogadores com divida</h6>
+                    (imagem de grafico)
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <h3>Jogadores</h3>
+            <div class="m-4 my-7">
+                <div class="row justify-content-between my-4">
+                    <div class="col-1">
+                        <button type="button" class="btn btn-secondary" (click)="voltarPagina()">Anterior</button>
+                    </div>
+                    <div class="col-1">
+                        <button type="button" class="btn btn-success" (click)="proximaPagina()">Proxima</button>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Cidade</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Numeros</th>
+                            <th scope="col">Valor Pago</th>
+                            <th scope="col">Possui Dívida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let e of clientes; let i = index">
+                            <td>{{ e.Nome }}</td>
+                            <td>{{ e.Cidade }}</td>
+                            <td>{{ e.Telefone }}</td>
+                            <td>{{ e.Numeros }}</td>
+                            <td>R$ {{ e.ValorPago }}</td>
+                            <td>{{ e.Divida }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+    </mat-dialog-actions>

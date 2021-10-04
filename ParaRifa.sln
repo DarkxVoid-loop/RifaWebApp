@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ParaRifa", "ParaRifa.vbproj", "{BE164E57-17C2-4A93-A1F6-DF6D036F9DCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE164E57-17C2-4A93-A1F6-DF6D036F9DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE164E57-17C2-4A93-A1F6-DF6D036F9DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE164E57-17C2-4A93-A1F6-DF6D036F9DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE164E57-17C2-4A93-A1F6-DF6D036F9DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84453DC8-33B5-4371-A43B-2B67DE762FA8}
+	EndGlobalSection
+EndGlobal
